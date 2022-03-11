@@ -1,21 +1,23 @@
 // FC 
 import React from 'react';
+import PropTypes from "prop-types";
+// uso de destructuracion de las props 
 
-const PrimeraApp = () => {
+const PrimeraApp = ({ saludo }) => {
 
-    const saludo = 'Hola Mundo';
 
-    const objeto = {
-        nombre: 'Pablo',
-        edad: 24
-    };
+
     return (
         <>
             <h1>{saludo}</h1>
-            <pre>{JSON.stringify(objeto, null, 3)}</pre>
             <p>Soy un parrafo!!!</p>
         </>
     );
 }
 
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired,
+
+}
 export default PrimeraApp;
+
